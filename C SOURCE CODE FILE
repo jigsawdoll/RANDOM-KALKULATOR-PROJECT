@@ -1,0 +1,948 @@
+#include <stdio.h>
+
+//create function for  series length
+int j(int d); //i create a function int data type in parameter
+
+int main(void)
+{
+	char learn;
+
+	puts("\n");
+
+	puts("\n");
+	puts(" +=============================+======+=============+ ");
+	puts(" | SIMPLE CALCULATOR           |  S   | ADDITIONS   | ");
+	puts(" +=============================+======+=============+ ");
+	puts(" | 1. Additionns               | [+]  |     [A]     | ");
+	puts(" +=============================+======+=============+ ");
+	puts(" | 2. Substraction             | [-]  |     [B]     | ");
+	puts(" +=============================+======+=============+ ");
+	puts(" | 3. Multiplication           | [X]  |     [C]     | ");
+	puts(" +=============================+======+=============+ ");
+	puts(" | 4. Division                 | [:]  |     [D]     | ");
+	puts(" +=============================+======+=============+ ");
+	puts(" | 5. Modulus                  | [%]  |     [E]     | ");
+	puts(" +=============================+======+=============+ ");
+	puts(" | 6. Rank                     | [**] |     [F]     | ");
+	puts(" +=============================+======+=============+ ");
+
+	printf(" Please Read Here (y/n): "); scanf("%c", &learn); puts("\n");
+	
+	if(learn == 'y'){
+		puts("\n");
+		puts(" Usage:");
+		puts(" - Number (1 - 4) <==> (1 ==> Additions), (2 ==> Substraction), (3 ==> Multiplication), (4 ==> Division), (5 ==> Modulus), (6 ==> Rank)");
+		puts(" : ==> You Can Perform Arithmetic Operations Using These Options \n\n");
+		
+		puts(" - Additions (A/B/C/D/E/F) <==> Random Basic Program ");
+		puts(" - [A] ==> In This Options u Can Check Whether The Number u Entered Is a Positive or Negative Number ");
+		puts(" - [B] ==> In This Options u Can Check Your Test Score Results Whether u Are One Of The Student Who Passed a Competitions Or Not (You Can't Enter a Value More Than 100)");
+		puts(" - [C] ==> In This Options u Can Check The Price Of Each Food u Want To Buy Along Which The Price Each u Can Enter Where u Are From So i can Interpret How Much Money u Have to Pay ");
+		puts(" - [D] ==> In This Options It Is Just a Loop to Neatly Sort a Number And Add it With a Little Cube and Blocks Algorithm ");
+		puts(" - [E] ==> In This Options u Can Calculate How Much Money u Have to Use From The Basic Salary u Get by Deviding it by Ur Total Working Hours ");
+		puts(" - [F] ==> In This Options u Can Perform Number Series Operations Using The Recursive Function in C So As a Results The Repetitions Of The Input Variable Will add  Its own sum to The Final Limit ");
+		printf("\n");
+		
+		
+		char select;
+		printf("\n Enter Your Program (C/A): "); scanf(" %c", &select); puts("\n");
+		if(select == 'C'){
+			int options;
+			puts(" YOUR SELECTING SIMPLE CALCULATOR ");
+			printf("\n\n Please Enter Your Options: "); scanf("%d", &options);
+			switch(options){
+	
+				case 1:;
+				int tp, td;
+				printf("\n Enter First Number: "); scanf("%d", &tp); printf(" Enter Second Number: "); scanf("%d", &td);
+				/* arithmetic operation (addition) */
+				printf(" Results: %d + %d = %d \n", tp, td, (tp + td));
+				break;
+	
+				case 2:;
+				int kp, kd;
+				printf("\n Enter First Number: "); scanf("%d", &kp); printf(" Enter Second Number: "); scanf("%d", &kd);
+				/* arithmetic operation (substraction)  */
+				printf(" Results: %d - %d = %d \n", kp, kd, (kp - kd));
+				break;
+	
+				case 3:;
+				int kkp, kkd;
+				printf("\n Enter First Number: "); scanf("%d", &kkp); printf(" Enter Second Number: "); scanf("%d", &kkd);
+				/* arithmetic operation (multiplication) */
+				printf(" Results: %d x %d = %d \n", kkp, kkd, (kkp * kkd));
+				break;
+	
+				case 4:;
+				int bp, bd;
+				printf("\n Enter First Number: "); scanf("%d", &bp); printf(" Enter Second Number: "); scanf("%d", &bd);
+				/* arithmetic operation (division) */
+				printf(" Results: %d : %d = %d \n", bp, bd, (bp / bd));
+				break;
+	
+				case 5:;
+				int mp, md;
+				printf("\n Enter First Number: "); scanf("%d", &mp); printf(" Enter Second Number: "); scanf("%d", &md);
+				/* arithmetic operation (modulus) */
+				printf(" Results: %d mod %d = %d \n", mp, md, (mp % md));
+				break;
+	
+				case 6:;
+				int rp, rd;
+				printf("\n Enter First Number: "); scanf("%d", &rp); printf(" Enter Second Number: "); scanf("%d", &rd);
+				/* arithmetic operation (eksponeties) */
+				printf(" Results %d ** %d = %d \n", rp, rd, eks(rp, rd));
+				break;
+		    }
+		} else if(select == 'A'){
+			char sq;
+			puts(" YOUR SELECTING QUESTIONS \n");
+			printf(" Please Enter Your Options: "); scanf("%s", &sq);
+			if(sq != 'A'){
+				if(sq != 'B'){
+					if(sq != 'C'){
+						if(sq != 'D'){
+							if(sq != 'E'){
+								if(sq != 'F'){
+									puts("\n Sorry. You Just Can Insert (CAPSLOCK/CAPITALIS) Character \n");
+								}
+							}
+						}
+					}
+				}
+			}
+			if(sq == 'A'){
+				int select_no;
+				puts("\n POSITIVE AND NEGATIVE NUMBERS \n");
+				printf(" Please Enter Your Number: "); scanf("%d", &select_no); puts("\n");
+				if(select_no > 0){
+					printf(" %d Positif Numbers \n", select_no);
+				}
+				else{
+					 printf(" %d Negative Numbers \n", select_no);
+				}
+			} else if(sq == 'B'){
+				int u_grade;
+				puts("\n Check Your Grades \n");
+				printf(" Please Enter Your Grade: "); scanf("%d", &u_grade); puts("\n");
+				if(u_grade >= 90){
+					if(u_grade < 100){
+						printf(" Happy Dear. u Getting Grade A \n");
+					}
+				} else if(u_grade >= 80){
+					if(u_grade < 90){
+						printf(" Happy Dear. u Getting Grade B \n");
+					}
+				} else if(u_grade >= 75){
+					if(u_grade < 80){
+						printf(" Happy Dear. u Getting Grade c \n");
+					}
+				} if(u_grade > 100){
+					printf(" Sorry. u Insert Invalid Grade \n");
+				} else if(u_grade < 75){
+					printf(" Sorry. u Failure \n");
+				}
+			} else if(sq == 'C'){
+				puts("\n");
+				puts(" +==================================+=======+ ");
+				puts(" | Select Your Favorite Food :)     | Price | ");
+				puts(" +==================================+=======+ ");
+				puts(" | Dear. u Must Insert (A - D )     | Title | ");
+				puts(" +==================================+=======+ ");
+				puts(" | 1. [A] Kentucy Fried Chicken     | [$20] | ");
+				puts(" +==================================+=======+ ");
+				puts(" | 2. [B] Multi Hamburger           | [$10] | ");
+				puts(" +==================================+=======+ ");
+				puts(" | 3. [C] Grill Band                | [$07] | ");
+				puts(" +==================================+=======+ ");
+				puts(" | 4. [D] French Fries              | [$05] | ");
+				puts(" +==================================+=======+ \n");
+	
+				char select_food;
+	
+				printf(" Please Enter Your Food: "); scanf("%s", &select_food); puts("\n");
+	
+				switch(select_food){
+	
+					case 'A':;
+					printf(" Food Name: Kentucy Fried Chicken \n");
+	    	        printf(" Price: $20 \n\n");
+	
+				 	char continue_or_not;
+	
+					printf(" Do You Want To Continue (y/n): "); scanf("%s", &continue_or_not); puts("\n");
+					if(continue_or_not == 'y' || continue_or_not == 'Y'){
+	
+						puts(" Okay. Before Continuing. Where Did u Come From: ");
+	
+						puts(" 1. Russian ");
+						puts(" 2. Chinese ");
+						puts(" 3. Indonesian ");
+						puts(" 4. Thailand \n\n");
+	
+						int select_country;
+	
+						printf(" Enter Your Country: "); scanf("%d", &select_country); puts("\n");
+	
+						switch(select_country){
+							case 1:;
+							printf(" Country: Russian \n");
+							printf(" Price $: $20 \n");
+							printf(" Buy: 1818.60 Rubles Russian \n");
+							break;
+	
+							case 2:;
+							printf(" Country: Chinese \n");
+							printf(" Price $: $20 \n");
+							printf(" Buy: 142.05 Yuan Tiongkok \n");
+							break;
+	
+							case 3:;
+							printf(" Country: Indonesian \n");
+							printf(" Price $: $20 \n");
+							printf(" Buy: 310.067.00 Rupiah Indonesian \n");
+							break;
+	
+							case 4:;
+							printf(" Country: Thailand \n");
+							printf(" Price $: $20 \n");
+							printf(" Buy: 693.40 Bath Thainland \n");
+							break;
+						}
+						break;
+					}
+					else if(continue_or_not == 'n' || continue_or_not == 'N'){
+						printf(" Thank You. Because u Has Been Use Me :) \n");
+						break;
+					}
+					case 'B':;
+					printf(" Food Name: Multi Hamburger \n");
+	    	        printf(" Price: $10 \n\n");
+	
+				 	char continue_or_not_1;
+	
+					printf(" Do You Want To Continue (y/n): "); scanf("%s", &continue_or_not_1); puts("\n");
+					if(continue_or_not_1 == 'y' || continue_or_not_1 == 'Y'){
+	
+						puts(" Okay. Before Continuing. Where Did u Come From: ");
+	
+						puts(" 1. Russian ");
+						puts(" 2. Chinese ");
+						puts(" 3. Indonesian ");
+						puts(" 4. Thailand \n\n");
+	
+						int select_country_1;
+	
+						printf(" Enter Your Country: "); scanf("%d", &select_country_1); puts("\n");
+	
+						switch(select_country_1){
+							case 1:;
+							printf(" Country: Russian \n");
+							printf(" Price $: $10 \n");
+							printf(" Buy: 909.30 Rubles Russian \n");
+							break;
+	
+							case 2:;
+							printf(" Country: Chinese \n");
+							printf(" Price $: $10 \n");
+							printf(" Buy: 71.02 Yuan Tiongkok \n");
+							break;
+	
+							case 3:;
+							printf(" Country: Indonesian \n");
+							printf(" Price $: $10 \n");
+							printf(" Buy: 155.033.50 Rupiah Indonesian \n");
+							break;
+	
+							case 4:;
+							printf(" Country: Thailand \n");
+							printf(" Price $: $10 \n");
+							printf(" Buy: 346.70 Bath Thainland \n");
+							break;
+						}
+						break;
+					}
+					else if(continue_or_not_1 == 'n' || continue_or_not_1 == 'N'){
+						printf(" Thank You. Because u Has Been Use Me :) \n");
+						break;
+					}
+					case 'C':;
+					printf(" Food Name: Grill Band \n");
+	    	        printf(" Price: $07 \n\n");
+	
+				 	char continue_or_not_2;
+	
+					printf(" Do You Want To Continue (y/n): "); scanf("%s", &continue_or_not_2); puts("\n");
+					if(continue_or_not_2 == 'y' || continue_or_not_2 == 'Y'){
+	
+						puts(" Okay. Before Continuing. Where Did u Come From: ");
+	
+						puts(" 1. Russian ");
+						puts(" 2. Chinese ");
+						puts(" 3. Indonesian ");
+						puts(" 4. Thailand \n\n");
+	
+						int select_country_2;
+	
+						printf(" Enter Your Country: "); scanf("%d", &select_country_2); puts("\n");
+	
+						switch(select_country_2){
+							case 1:;
+							printf(" Country: Russian \n");
+							printf(" Price $: $07 \n");
+							printf(" Buy: 636.51 Rubles Russian \n");
+							break;
+	
+							case 2:;
+							printf(" Country: Chinese \n");
+							printf(" Price $: $07 \n");
+							printf(" Buy: 49.71 Yuan Tiongkok \n");
+							break;
+	
+							case 3:;
+							printf(" Country: Indonesian \n");
+							printf(" Price $: $07 \n");
+							printf(" Buy: 108.523.25 Rupiah Indonesian \n");
+							break;
+																																									  
+							case 4:;
+							printf(" Country: Thailand \n");
+							printf(" Price $: $07 \n");
+							printf(" Buy: 242.69 Bath Thainland \n");
+							break;
+						}
+						break;
+					}
+					else if(continue_or_not_2 == 'n' || continue_or_not_2 == 'N'){
+						printf(" Thank You. Because u Has Been Use Me :) \n");
+						break;
+					}
+					case 'D':;
+					printf(" Food Name: Friench Rice \n");
+	    	        printf(" Price: $05 \n\n");
+	
+				 	char continue_or_not_3;
+	
+					printf(" Do You Want To Continue (y/n): "); scanf("%s", &continue_or_not_3); puts("\n");
+					if(continue_or_not_3 == 'y' || continue_or_not_3 == 'Y'){
+	
+						puts(" Okay. Before Continuing. Where Did u Come From: ");
+	
+						puts(" 1. Russian ");
+						puts(" 2. Chinese ");
+						puts(" 3. Indonesian ");
+						puts(" 4. Thailand \n\n");
+	
+						int select_country_3;
+	
+						printf(" Enter Your Country: "); scanf("%d", &select_country_3); puts("\n");
+	
+						switch(select_country_3){
+							case 1:;
+							printf(" Country: Russian \n");
+							printf(" Price $: $05 \n");
+							printf(" Buy: 454.65 Rubles Russian \n");
+							break;
+	
+							case 2:;
+							printf(" Country: Chinese \n");
+							printf(" Price $: $05 \n");
+							printf(" Buy: 35.51 Yuan Tiongkok \n");
+							break;
+	
+	
+							case 3:;
+							printf(" Country: Indonesian \n");
+							printf(" Price $: $05 \n");
+							printf(" Buy: 77.516.75 Rupiah Indonesian \n");
+							break;
+	
+							case 4:;
+							printf(" Country: Thailand \n");
+							printf(" Price $: $05 \n");
+							printf(" Buy: 173.35 Bath Thainland \n");
+							break;
+						}
+						break;
+					}
+					else if(continue_or_not_3 == 'n' || continue_or_not_3 == 'N'){
+						printf(" Thank You. Because u Has Been Use Me :) \n");
+						break;
+					}
+				}
+			} else if(sq == 'D'){
+	
+				puts("\n +======================================+ ");
+				puts(" |         SHOW NUMBERS PROGRAM         | ");
+				puts(" +======================================+ \n");
+	
+				char senum;
+	
+				printf(" Are u Want Continue (y/n): "); scanf(" %c", &senum); puts("\n");
+	
+				switch(senum){
+					case 'y':;
+					int i_numbers;
+					int index_i_num;
+					printf(" Please Insert u Numbers: "); scanf("%d", &i_numbers); puts("\n");
+	
+					printf(" ");
+					for(index_i_num = 1; index_i_num <= i_numbers; index_i_num++){
+						printf("%d ", index_i_num);
+					}
+					printf("\n");
+					
+					puts("\n +======================================+ ");
+					puts(" |       LOOPING CUBES AND BLOCKS       | ");
+					puts(" +======================================+ \n");
+		
+					int lcab;
+					int index1_lcab;
+					int index2_lcab;
+		
+					printf(" Please Insert ur Numbers: "); scanf("%d", &lcab); puts("\n");
+					
+					puts(" \n CUBES LOOPING \n");
+					
+					/* CUBES LOOPING */
+					for(index1_lcab = 1; index1_lcab <= lcab; index1_lcab++){
+						for(index2_lcab = 1; index2_lcab <= lcab; index2_lcab++){
+							printf(" %d", lcab);
+						}
+						printf("\n");			
+					}
+					
+					puts("\n BLOCKS LOOPING \n");
+					
+					/*  BLOCKS LOOPING */
+					for(index1_lcab = 1; index1_lcab <= lcab; index1_lcab++){
+						for(index2_lcab = 1; index2_lcab <= lcab; index2_lcab++){
+							printf(" %d ", lcab);
+						}
+						printf("\n");			
+					}
+					
+					puts("\n OR \n");
+					
+					for(index1_lcab = 1; index1_lcab <= lcab; index1_lcab++){
+						for(index2_lcab = 1;  index2_lcab <= lcab; index2_lcab++){
+							printf(" %d \t", lcab);
+						}
+						printf("\n");			
+					}
+					
+	   				case 'n':;
+	             	puts("\n Thank You. Because u Has Been Use Me :) \n");
+	             	break;
+	            }
+			} else if(sq == 'E'){
+			  	puts("\n +======================================+ ");
+				puts(" |         WHAT IS MY SALARY            | ");
+				puts(" +======================================+ \n");
+				
+				int num, basic_salary, overtime, allowance;
+				char name[50];
+							
+				puts(" Disclaimer: \n Allowance = 15% ==> Basic Salary \n Overtime Pay = 3% ==> Basic Salary \n ");
+				
+				printf(" Enter Your Number: "); scanf("%d", &num); 
+				printf(" Enter Your Name: "); scanf(" %[^\n]s", name); 
+				printf(" Enter Your Basic Salary: "); scanf("%d", &basic_salary); 
+				printf(" Enter Your Overtime Hours: "); scanf("%d", &overtime); 
+				printf(" Enter Your Allowance: "); scanf("%d", &allowance); puts("\n");
+				
+				puts(" +======================================+ \n");
+				
+				printf(" Your Number: %d \n", num); 
+				printf(" Your Name: %s \n", name); 
+				printf(" Basic Salary: %d \n", basic_salary);
+				printf(" Allowance: %d \n", (0.15/basic_salary));
+				printf(" Overtime Hours: %d \n", (overtime * 0.03)/basic_salary);
+			} else if(sq == 'F'){
+				puts("\n +======================================+ ");
+				puts(" |            Series Length             | ");
+				puts(" +======================================+ \n");
+				
+				int i, d;
+				
+				printf(" Enter Your Number: "); scanf("%d", &d); puts("\n");
+				
+				printf(" ");
+				for(i = 1; i < d; i++){
+					printf("%d", i); printf(" + ");
+				}
+				printf(" %d = %d \n", i, j(d));
+			}
+		}	
+	}
+	else if(learn == 'n'){
+		char select;
+		printf("\n Enter Your Program (C/A): "); scanf(" %c", &select); puts("\n");
+		if(select == 'C'){
+			int options;
+			puts(" YOUR SELECTING SIMPLE CALCULATOR ");
+			printf("\n\n Please Enter Your Options: "); scanf("%d", &options);
+			switch(options){
+	
+				case 1:;
+				int tp, td;
+				printf("\n Enter First Number: "); scanf("%d", &tp); printf(" Enter Second Number: "); scanf("%d", &td);
+				/* arithmetic operation (addition) */
+				printf(" Results: %d + %d = %d \n", tp, td, (tp + td));
+				break;
+	
+				case 2:;
+				int kp, kd;
+				printf("\n Enter First Number: "); scanf("%d", &kp); printf(" Enter Second Number: "); scanf("%d", &kd);
+				/* arithmetic operation (substraction)  */
+				printf(" Results: %d - %d = %d \n", kp, kd, (kp - kd));
+				break;
+	
+				case 3:;
+				int kkp, kkd;
+				printf("\n Enter First Number: "); scanf("%d", &kkp); printf(" Enter Second Number: "); scanf("%d", &kkd);
+				/* arithmetic operation (multiplication) */
+				printf(" Results: %d x %d = %d \n", kkp, kkd, (kkp * kkd));
+				break;
+	
+				case 4:;
+				int bp, bd;
+				printf("\n Enter First Number: "); scanf("%d", &bp); printf(" Enter Second Number: "); scanf("%d", &bd);
+				/* arithmetic operation (division) */
+				printf(" Results: %d : %d = %d \n", bp, bd, (bp / bd));
+				break;
+	
+				case 5:;
+				int mp, md;
+				printf("\n Enter First Number: "); scanf("%d", &mp); printf(" Enter Second Number: "); scanf("%d", &md);
+				/* arithmetic operation (modulus) */
+				printf(" Results: %d mod %d = %d \n", mp, md, (mp % md));
+				break;
+	
+				case 6:;
+				int rp, rd;
+				printf("\n Enter First Number: "); scanf("%d", &rp); printf(" Enter Second Number: "); scanf("%d", &rd);
+				/* arithmetic operation (eksponeties) */
+				printf(" Results %d ** %d = %d \n", rp, rd, eks(rp, rd));
+				break;
+		    }
+		} else if(select == 'A'){
+			char sq;
+			puts(" YOUR SELECTING QUESTIONS \n");
+			printf(" Please Enter Your Options: "); scanf("%s", &sq);
+			if(sq != 'A'){
+				if(sq != 'B'){
+					if(sq != 'C'){
+						if(sq != 'D'){
+							if(sq != 'E'){
+								if(sq != 'F'){
+									puts("\n Sorry. You Just Can Insert (CAPSLOCK/CAPITALIS) Character \n");
+								}
+							}
+						}
+					}
+				}
+			}
+			if(sq == 'A'){
+				int select_no;
+				puts("\n POSITIVE AND NEGATIVE NUMBERS \n");
+				printf(" Please Enter Your Number: "); scanf("%d", &select_no); puts("\n");
+				if(select_no > 0){
+					printf(" %d Positif Numbers \n", select_no);
+				}
+				else{
+					 printf(" %d Negative Numbers \n", select_no);
+				}
+			} else if(sq == 'B'){
+				int u_grade;
+				puts("\n Check Your Grades \n");
+				printf(" Please Enter Your Grade: "); scanf("%d", &u_grade); puts("\n");
+				if(u_grade >= 90){
+					if(u_grade < 100){
+						printf(" Happy Dear. u Getting Grade A \n");
+					}
+				} else if(u_grade >= 80){
+					if(u_grade < 90){
+						printf(" Happy Dear. u Getting Grade B \n");
+					}
+				} else if(u_grade >= 75){
+					if(u_grade < 80){
+						printf(" Happy Dear. u Getting Grade c \n");
+					}
+				} if(u_grade > 100){
+					printf(" Sorry. u Insert Invalid Grade \n");
+				} else if(u_grade < 75){
+					printf(" Sorry. u Failure \n");
+				}
+			} else if(sq == 'C'){
+				puts("\n");
+				puts(" +==================================+=======+ ");
+				puts(" | Select Your Favorite Food :)     | Price | ");
+				puts(" +==================================+=======+ ");
+				puts(" | Dear. u Must Insert (A - D )     | Title | ");
+				puts(" +==================================+=======+ ");
+				puts(" | 1. [A] Kentucy Fried Chicken     | [$20] | ");
+				puts(" +==================================+=======+ ");
+				puts(" | 2. [B] Multi Hamburger           | [$10] | ");
+				puts(" +==================================+=======+ ");
+				puts(" | 3. [C] Grill Band                | [$07] | ");
+				puts(" +==================================+=======+ ");
+				puts(" | 4. [D] French Fries              | [$05] | ");
+				puts(" +==================================+=======+ \n");
+	
+				char select_food;
+	
+				printf(" Please Enter Your Food: "); scanf("%s", &select_food); puts("\n");
+	
+				switch(select_food){
+	
+					case 'A':;
+					printf(" Food Name: Kentucy Fried Chicken \n");
+	    	        printf(" Price: $20 \n\n");
+	
+				 	char continue_or_not;
+	
+					printf(" Do You Want To Continue (y/n): "); scanf("%s", &continue_or_not); puts("\n");
+					if(continue_or_not == 'y' || continue_or_not == 'Y'){
+	
+						puts(" Okay. Before Continuing. Where Did u Come From: ");
+	
+						puts(" 1. Russian ");
+						puts(" 2. Chinese ");
+						puts(" 3. Indonesian ");
+						puts(" 4. Thailand \n\n");
+	
+						int select_country;
+	
+						printf(" Enter Your Country: "); scanf("%d", &select_country); puts("\n");
+	
+						switch(select_country){
+							case 1:;
+							printf(" Country: Russian \n");
+							printf(" Price $: $20 \n");
+							printf(" Buy: 1818.60 Rubles Russian \n");
+							break;
+	
+							case 2:;
+							printf(" Country: Chinese \n");
+							printf(" Price $: $20 \n");
+							printf(" Buy: 142.05 Yuan Tiongkok \n");
+							break;
+	
+							case 3:;
+							printf(" Country: Indonesian \n");
+							printf(" Price $: $20 \n");
+							printf(" Buy: 310.067.00 Rupiah Indonesian \n");
+							break;
+	
+							case 4:;
+							printf(" Country: Thailand \n");
+							printf(" Price $: $20 \n");
+							printf(" Buy: 693.40 Bath Thainland \n");
+							break;
+						}
+						break;
+					}
+					else if(continue_or_not == 'n' || continue_or_not == 'N'){
+						printf(" Thank You. Because u Has Been Use Me :) \n");
+						break;
+					}
+					case 'B':;
+					printf(" Food Name: Multi Hamburger \n");
+	    	        printf(" Price: $10 \n\n");
+	
+				 	char continue_or_not_1;
+	
+					printf(" Do You Want To Continue (y/n): "); scanf("%s", &continue_or_not_1); puts("\n");
+					if(continue_or_not_1 == 'y' || continue_or_not_1 == 'Y'){
+	
+						puts(" Okay. Before Continuing. Where Did u Come From: ");
+	
+						puts(" 1. Russian ");
+						puts(" 2. Chinese ");
+						puts(" 3. Indonesian ");
+						puts(" 4. Thailand \n\n");
+	
+						int select_country_1;
+	
+						printf(" Enter Your Country: "); scanf("%d", &select_country_1); puts("\n");
+	
+						switch(select_country_1){
+							case 1:;
+							printf(" Country: Russian \n");
+							printf(" Price $: $10 \n");
+							printf(" Buy: 909.30 Rubles Russian \n");
+							break;
+	
+							case 2:;
+							printf(" Country: Chinese \n");
+							printf(" Price $: $10 \n");
+							printf(" Buy: 71.02 Yuan Tiongkok \n");
+							break;
+	
+							case 3:;
+							printf(" Country: Indonesian \n");
+							printf(" Price $: $10 \n");
+							printf(" Buy: 155.033.50 Rupiah Indonesian \n");
+							break;
+	
+							case 4:;
+							printf(" Country: Thailand \n");
+							printf(" Price $: $10 \n");
+							printf(" Buy: 346.70 Bath Thainland \n");
+							break;
+						}
+						break;
+					}
+					else if(continue_or_not_1 == 'n' || continue_or_not_1 == 'N'){
+						printf(" Thank You. Because u Has Been Use Me :) \n");
+						break;
+					}
+					case 'C':;
+					printf(" Food Name: Grill Band \n");
+	    	        printf(" Price: $07 \n\n");
+	
+				 	char continue_or_not_2;
+	
+					printf(" Do You Want To Continue (y/n): "); scanf("%s", &continue_or_not_2); puts("\n");
+					if(continue_or_not_2 == 'y' || continue_or_not_2 == 'Y'){
+	
+						puts(" Okay. Before Continuing. Where Did u Come From: ");
+	
+						puts(" 1. Russian ");
+						puts(" 2. Chinese ");
+						puts(" 3. Indonesian ");
+						puts(" 4. Thailand \n\n");
+	
+						int select_country_2;
+	
+						printf(" Enter Your Country: "); scanf("%d", &select_country_2); puts("\n");
+	
+						switch(select_country_2){
+							case 1:;
+							printf(" Country: Russian \n");
+							printf(" Price $: $07 \n");
+							printf(" Buy: 636.51 Rubles Russian \n");
+							break;
+	
+							case 2:;
+							printf(" Country: Chinese \n");
+							printf(" Price $: $07 \n");
+							printf(" Buy: 49.71 Yuan Tiongkok \n");
+							break;
+	
+							case 3:;
+							printf(" Country: Indonesian \n");
+							printf(" Price $: $07 \n");
+							printf(" Buy: 108.523.25 Rupiah Indonesian \n");
+							break;
+																																									  
+							case 4:;
+							printf(" Country: Thailand \n");
+							printf(" Price $: $07 \n");
+							printf(" Buy: 242.69 Bath Thainland \n");
+							break;
+						}
+						break;
+					}
+					else if(continue_or_not_2 == 'n' || continue_or_not_2 == 'N'){
+						printf(" Thank You. Because u Has Been Use Me :) \n");
+						break;
+					}
+					case 'D':;
+					printf(" Food Name: Friench Rice \n");
+	    	        printf(" Price: $05 \n\n");
+	
+				 	char continue_or_not_3;
+	
+					printf(" Do You Want To Continue (y/n): "); scanf("%s", &continue_or_not_3); puts("\n");
+					if(continue_or_not_3 == 'y' || continue_or_not_3 == 'Y'){
+	
+						puts(" Okay. Before Continuing. Where Did u Come From: ");
+	
+						puts(" 1. Russian ");
+						puts(" 2. Chinese ");
+						puts(" 3. Indonesian ");
+						puts(" 4. Thailand \n\n");
+	
+						int select_country_3;
+	
+						printf(" Enter Your Country: "); scanf("%d", &select_country_3); puts("\n");
+	
+						switch(select_country_3){
+							case 1:;
+							printf(" Country: Russian \n");
+							printf(" Price $: $05 \n");
+							printf(" Buy: 454.65 Rubles Russian \n");
+							break;
+	
+							case 2:;
+							printf(" Country: Chinese \n");
+							printf(" Price $: $05 \n");
+							printf(" Buy: 35.51 Yuan Tiongkok \n");
+							break;
+	
+	
+							case 3:;
+							printf(" Country: Indonesian \n");
+							printf(" Price $: $05 \n");
+							printf(" Buy: 77.516.75 Rupiah Indonesian \n");
+							break;
+	
+							case 4:;
+							printf(" Country: Thailand \n");
+							printf(" Price $: $05 \n");
+							printf(" Buy: 173.35 Bath Thainland \n");
+							break;
+						}
+						break;
+					}
+					else if(continue_or_not_3 == 'n' || continue_or_not_3 == 'N'){
+						printf(" Thank You. Because u Has Been Use Me :) \n");
+						break;
+					}
+				}
+			} else if(sq == 'D'){
+	
+				puts("\n +======================================+ ");
+				puts(" |         SHOW NUMBERS PROGRAM         | ");
+				puts(" +======================================+ \n");
+	
+				char senum;
+	
+				printf(" Are u Want Continue (y/n): "); scanf(" %c", &senum); puts("\n");
+	
+				switch(senum){
+					case 'y':;
+					int i_numbers;
+					int index_i_num;
+					printf(" Please Insert u Numbers: "); scanf("%d", &i_numbers); puts("\n");
+	
+					printf(" ");
+					for(index_i_num = 1; index_i_num <= i_numbers; index_i_num++){
+						printf("%d ", index_i_num);
+					}
+					printf("\n");
+					
+					puts("\n +======================================+ ");
+					puts(" |       LOOPING CUBES AND BLOCKS       | ");
+					puts(" +======================================+ \n");
+		
+					int lcab;
+					int index1_lcab;
+					int index2_lcab;
+		
+					printf(" Please Insert ur Numbers: "); scanf("%d", &lcab); puts("\n");
+					
+					puts(" \n CUBES LOOPING \n");
+					
+					/* CUBES LOOPING */
+					for(index1_lcab = 1; index1_lcab <= lcab; index1_lcab++){
+						for(index2_lcab = 1; index2_lcab <= lcab; index2_lcab++){
+							printf(" %d", lcab);
+						}
+						printf("\n");			
+					}
+					
+					puts("\n BLOCKS LOOPING \n");
+					
+					/*  BLOCKS LOOPING */
+					for(index1_lcab = 1; index1_lcab <= lcab; index1_lcab++){
+						for(index2_lcab = 1; index2_lcab <= lcab; index2_lcab++){
+							printf(" %d ", lcab);
+						}
+						printf("\n");			
+					}
+					
+					puts("\n OR \n");
+					
+					for(index1_lcab = 1; index1_lcab <= lcab; index1_lcab++){
+						for(index2_lcab = 1;  index2_lcab <= lcab; index2_lcab++){
+							printf(" %d \t", lcab);
+						}
+						printf("\n");			
+					}
+					
+	   				case 'n':;
+	             	puts("\n Thank You. Because u Has Been Use Me :) \n");
+	             	break;
+	            }
+			} else if(sq == 'E'){
+			  	puts("\n +======================================+ ");
+				puts(" |         WHAT IS MY SALARY            | ");
+				puts(" +======================================+ \n");
+				
+				int num, basic_salary, overtime, allowance;
+				char name[50];
+							
+				puts(" Disclaimer: \n Allowance = 15% ==> Basic Salary \n Overtime Pay = 3% ==> Basic Salary \n ");
+				
+				printf(" Enter Your Number: "); scanf("%d", &num); 
+				printf(" Enter Your Name: "); scanf(" %[^\n]s", name); 
+				printf(" Enter Your Basic Salary: "); scanf("%d", &basic_salary); 
+				printf(" Enter Your Overtime Hours: "); scanf("%d", &overtime); 
+				printf(" Enter Your Allowance: "); scanf("%d", &allowance); puts("\n");
+				
+				puts(" +======================================+ \n");
+				
+				printf(" Your Number: %d \n", num); 
+				printf(" Your Name: %s \n", name); 
+				printf(" Basic Salary: %d \n", basic_salary);
+				printf(" Allowance: %d \n", (0.15/basic_salary));
+				printf(" Overtime Hours: %d \n", (overtime * 0.03)/basic_salary);
+			} else if(sq == 'F'){
+				puts("\n +======================================+ ");
+				puts(" |            Series Length             | ");
+				puts(" +======================================+ \n");
+				
+				int i, d;
+				
+				printf(" Enter Your Number: "); scanf("%d", &d); puts("\n");
+				
+				printf(" ");
+				for(i = 1; i < d; i++){
+					printf("%d", i); printf(" + ");
+				}
+				printf(" %d = %d \n", i, j(d));
+			}
+		}
+	}	
+}
+	
+	
+	
+	
+
+int j(int d){
+	if(d == 0){
+		return 0;
+	}
+	else
+		return d + j(d - 1);
+	
+}
+
+int eks(rp, rd)
+{
+
+	int i;
+	int point;
+
+	/* i create (for) looping with true value*/
+
+	point = 1;
+	for(i = 1; i <= rd; ++i) //it is generate True value
+		point = point * rp;
+
+	return(point);
+
+}
+
+
+
+/* eksplanation */
+//* i created 2 variabels with integer data type for exsponential. then on main(void) in case "6", i made normal code like the previous case *//
+//* and i create a new function with integer data type ater main(void). and i also attached 2 variabels in case 6 in the new function *//
+//* but, in curl brackets i create 2 new variabels with integer data type. under comentar, i gave the value of the variabel name (point) *//
+//* i give values 1. dan below, i do looping with for key as usual and return True value. i doing without curl brackets. in (point) variabels *//
+//* i perform a multiplication operation with myself (point) variabels by multiplying by a variabel (rp). and below return point value  *//
